@@ -19,7 +19,6 @@ public class AppUserController {
     }
 
     @GetMapping(value = "{user_name}")
-    @ResponseBody
     public ResponseEntity getAppUser(@PathVariable String user_name) {
         AppUserRequest appUserRequest = new AppUserRequest();
         appUserRequest.setName(user_name);
@@ -31,7 +30,6 @@ public class AppUserController {
     }
 
     @GetMapping
-    @ResponseBody
     public ResponseEntity getAll() {
         try {
             return new ResponseEntity(appUserService.getALl(), HttpStatus.OK);

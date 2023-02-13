@@ -18,6 +18,7 @@ public class Item {
     @SequenceGenerator(name = "item_id_generator", sequenceName = "item_id_sequence", allocationSize = 1)
     @Column(nullable = false)
     private Long id;
+    @ManyToOne(targetEntity = AppUser.class)
     private String user_name;
     private String name;
     private Boolean is_active;

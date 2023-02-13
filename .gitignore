@@ -37,3 +37,5 @@ build/
 ### Custom ###
 *.old
 StreamLambdaHandler.java
+*.gitignore
+*.db
